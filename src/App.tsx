@@ -3,7 +3,6 @@ import DomeGallery from './components/DomeGallery';
 import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
-import ContactSection from './components/ContactSection';
 import Silk from './components/Silk';
 import SplashCursor from './components/SplashCursor';
 import ScrollAnimations from './components/ScrollAnimations';
@@ -37,7 +36,6 @@ export default function App() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
-      <ContactSection />
     </main>
   );
 }

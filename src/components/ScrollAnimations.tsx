@@ -79,7 +79,7 @@ export default function ScrollAnimations() {
     });
 
     gsap.fromTo(
-      '#about p, #about a, #about button',
+      '#about p',
       { y: 40, opacity: 0 },
       {
         y: 0, opacity: 1, stagger: 0.1, duration: 0.8, ease: 'power2.out',
@@ -142,30 +142,6 @@ export default function ScrollAnimations() {
       end: 'bottom 15%',
     });
 
-    // ──────────────────────────────────────────
-    // 6. CONTACT — fade up
-    // ──────────────────────────────────────────
-    gsap.fromTo(
-      '#contact .hero-heading',
-      { y: 60, opacity: 0 },
-      {
-        y: 0, opacity: 1, duration: 1, ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '#contact', start: 'top 85%', end: 'top 45%', scrub: 1,
-        },
-      },
-    );
-
-    gsap.fromTo(
-      '#contact p, #contact a',
-      { y: 40, opacity: 0 },
-      {
-        y: 0, opacity: 1, stagger: 0.1, duration: 0.7, ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '#contact', start: 'top 80%', end: 'top 50%', scrub: 1,
-        },
-      },
-    );
   }, []);
 
   return null;

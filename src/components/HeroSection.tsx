@@ -1,5 +1,4 @@
 import Navbar from './Navbar';
-import ContactButton from './ContactButton';
 import FadeIn from './FadeIn';
 import Magnet from './Magnet';
 
@@ -27,10 +26,6 @@ export default function HeroSection() {
             >
               A college student majoring in computer science who's really into AI
             </p>
-          </FadeIn>
-
-          <FadeIn delay={0.5} y={20}>
-            <ContactButton href="#contact" />
           </FadeIn>
         </div>
       </div>

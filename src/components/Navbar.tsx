@@ -1,4 +1,4 @@
-const navLinks = ['About', 'Ability', 'Projects', 'Contact'];
+const navLinks = ['About', 'Ability', 'Projects'];
 
 export default function Navbar() {
   return (

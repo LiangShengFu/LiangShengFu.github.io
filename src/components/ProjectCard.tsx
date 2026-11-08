@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import LiveProjectButton from './LiveProjectButton';
 import GlassCard from './GlassCard';
 
 interface ProjectCardProps {
@@ -10,7 +9,6 @@ interface ProjectCardProps {
   category: string;
   name: string;
   images: [string, string, string]; // [col1_top, col1_bottom, col2]
-  liveUrl?: string;
 }
 
 export default function ProjectCard({
@@ -20,7 +18,6 @@ export default function ProjectCard({
   category,
   name,
   images,
-  liveUrl,
 }: ProjectCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -35,8 +32,8 @@ export default function ProjectCard({
     <div ref={containerRef} className="h-[85vh] flex items-center justify-center sticky" style={{ top: `${index * 28}px` }}>
       <motion.div style={{ scale }} className="w-full max-w-6xl">
         <GlassCard className="p-4 sm:p-6 md:p-8">
-          {/* Top row: number, label, name, live button */}
-          <div className="flex items-start justify-between mb-6 sm:mb-8 md:mb-10">
+          {/* Top row: number, label, name */}
+          <div className="flex items-start mb-6 sm:mb-8 md:mb-10">
             <div className="flex items-start gap-4 sm:gap-6 md:gap-8">
               <span
                 className="text-[#D7E2EA] font-black leading-none"
@@ -59,7 +56,6 @@ export default function ProjectCard({
                 </h3>
               </div>
             </div>
-            <LiveProjectButton href={liveUrl} />
           </div>
 
           {/* Bottom row: 2-column image grid */}

@@ -15,7 +15,6 @@ const projects = [
     category: 'Personal',
     name: 'Terrabis',
     images: projectImages,
-    liveUrl: 'https://github.com/Yukun-Zheng/Terrabis.git',
   },
   {
     number: '02',
@@ -64,7 +63,6 @@ export default function ProjectsSection() {
             category={project.category}
             name={project.name}
             images={project.images}
-            liveUrl={project.liveUrl}
           />
         ))}
       </div>
